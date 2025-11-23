@@ -1,12 +1,21 @@
+#!/bin/bash
+GitCommit = $(git commit -m "$commit_message"| grep "changed")
+GitPush = $(git push | grep "completed" | awk "{print $6})
+
 echo "Adding the file ..."
 git add .
 
 echo "Please mention the commit title : "
 read commit_message
 
-echo "Commiting the "$commit_message""
-git commit -m "$commit_message"
+echo "Thank you"
+
+echo "Commiting Now"
+echo  "Processing Please wait"
+echo "$GitCommit"
+echo "Process completed"
 
 echo "Now pushing the commited file"
-git push
+echo " Result:$GitPush"
+
 

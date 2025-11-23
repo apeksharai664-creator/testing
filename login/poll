@@ -1,0 +1,30 @@
+#!/bin/bash
+
+git add .
+
+read -p "Enter commit message: " commit_message
+
+CommitOutput=$(git commit -m "$commit_message" 2>&1)
+PushOutput=$(git push 2>&1)
+
+cat <<EOF
+
+==========================================
+              GIT SUMMARY
+==========================================
+
+Commit Message:
+$commit_message
+
+Commit Output:
+$CommitOutput
+
+Push Output:
+$PushOutput
+
+==========================================
+                DONE
+==========================================
+
+EOF
+
