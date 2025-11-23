@@ -1,0 +1,12 @@
+echo "Adding the file ..."
+git add .
+
+echo "Please mention the commit title : "
+read commit_message
+
+echo "Commiting the "$commit_message""
+git commit -m "$commit_message"
+
+echo "Now pushing the commited file"
+git push
+
