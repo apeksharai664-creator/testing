@@ -15,4 +15,4 @@ CommitOutput=$(git commit -m "$commit_message" | tail -n 1)
 echo " Process completed"
 echo " Now pushing the completed the file"
 
-FilePush=$(git push | grep -E "completed with)
+FilePush=$(git push | grep -E "completed with")
